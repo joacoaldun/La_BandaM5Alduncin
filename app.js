@@ -19,6 +19,6 @@ app.get('/registro', (req, res) => {
      res.render('registro')
     });
 
-     app.listen(3000, function() {
+     app.listen(puerto || 3000, function() {
     console.log("Servidor corriendo en el puerto 3000");
 })
