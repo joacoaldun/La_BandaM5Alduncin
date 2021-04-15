@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('partials/head') %>
+<body>
+    <%- include('partials/header') %>
+    
+    <main class= "mainregistro">
+     <section class ="sectionregistro">
+        <form action="/" method="POST">
+            <div class = "divnombre">
+                
+              <div class="minidiv">  <input class= "borderinput" type="text" name="name" placeholder="Nombre y apellido" required><span class="feedback"></span></div>
+              <div class="minidiv">  <input class= "borderinput" type="text" name="user" placeholder="Nombre de usuario" required></div>
+              <div class="minidiv">  <input class= "borderinput" type="email" name="email" placeholder="E-mail" required></div>
+            </div>
+                <br>
+                <label for="birth_date"><b>Fecha de nacimiento</b></label>
+                <br>
+                <div class = "fechadomicilio"> <input class= "borderinput" type="date" name="birth_date" id="birth_date" required></div>
+                <br>
+                <div class = "fechadomicilio"><input class= "borderinput" type="text" name="addres" placeholder="Domicilio" required></div>
+                <h4>Perfil del usuario</h4>
+                <div class="perfil">
+                    <input type="radio" name="profile" value="buy" id="buy">
+                    <label for="buy">Comprador</label>
+                    <input type="radio" name="profile" value="sell" id="sell">
+                    <label for="sell">Vendedor</label>
+                </div>
+
+                <h4>Intereses</h4>
+                <div class="intereses">
+                    <div class = "listacheck">
+                        <input type="checkbox" name="interests" value="a" id="a">
+                        <label for="a">Electro</label>
+                    </div>
+                    <div class = "listacheck">
+                        <input type="checkbox" name="interests" value="b" id="b">
+                        <label for="b">Moda</label>
+                    </div>
+                    <div class = "listacheck">
+                        <input type="checkbox" name="interests" value="c" id="c">
+                        <label for="c">Hogar</label>
+                    </div>
+                    <div class = "listacheck">
+                        <input type="checkbox" name="interests" value="d" id="d">
+                        <label for="d">Juguetería</label>
+                    </div>
+                    <div class = "listacheck">
+                        <input type="checkbox" name="interests" value="e" id="e">
+                        <label for="e">Vida sana</label>
+                    </div>
+                </div>
+                
+                <h4>Elegí tu foto de usuario</h4>
+                <div class= "fotoperfil" ><input type="file" name="avatar"></div>
+                <br>
+                <br>
+                <div class = "contraseña"> <input class= "borderinput" type="password" name="pass" placeholder="Elegí tu contraseña" required></div>
+                <div class = "contraseña"><input class= "borderinput" type="password" name="pass_confirm" placeholder="Confirmá tu contraseña" required></div>
+                <br>
+                <br>
+               <div class = "botones" >
+                <button  class= "botonregistro"  type="submit" >Enviar</button>
+                <button class= "botonregistro" type="reset">Borrar</button>
+               </div>
+                <br>
+                <br>
+
+
+         </form>
+
+
+
+
+        </section>
+
+
+
+    </main>
+    <%- include('partials/footer') %>
+</body>
+</html>
