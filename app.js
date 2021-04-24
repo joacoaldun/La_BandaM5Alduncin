@@ -12,11 +12,15 @@ const homeRouter = require('./routes/homeRouter');
 const userRouter = require('./routes/userRouter');
 const productRouter = require('./routes/productRouter');
 
+const methodOverride = require('method-override');
 
+
+app.use(methodOverride('_method'));
 
 
 app.use(express.static('public'));
 
+app.use(express.urlencoded({extended: false}));
 
 
 app.set('view engine', 'ejs')
